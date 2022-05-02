@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp">
+	<link rel="shortcut icon" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico">
+
+	<meta property="og:title" content="Netflix" />
+	<meta property="og:type" content="video.movie" />
+	<meta property="og:url" content="https://www.netflix.com/ua-en/" />
+	<meta property="og:image" content="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.ico" />
+	<meta property="og:description" content="Simple app as Netflix and easy in use and many filmns exists." />
+	<title>Netflix</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="">
+
+	
+	<div class="bg__blur"></div>
+	<img src="./images/archive/fast&fur.png" alt="" class="bg__image__blur" id="fastfur_png" style="display: none;">
+	<img src="./images/archive/dethOnNile.png" alt="" class="bg__image__blur" id="deth_png" style="display: none;">
+	<img src="./images/archive/honestThief.jpg" alt="" class="bg__image__blur" id="honest_png" style="display: none;">
+	<img src="./images/archive/iceRoad.jpeg" alt="" class="bg__image__blur" id="iceroad_png" style="display: none;">
+	<img src="./images/archive/murder.jpg" alt="" class="bg__image__blur" id="murder_png" style="display: none;">
+	<img src="./images/archive/theVault.jpg" alt="" class="bg__image__blur" id="thevault_png" style="display: none;">
+	<div class="bg__dark__blur" id="dark--blur" ></div>
+
+	
+	<div class="screen start" id="screen--start">
+			
+		<div class="content start__content">
+			<div class="start__screen__scroll">
+				<div class="start__screen__scroll--items">
+					<img src="images/tv.png" class="start__screen__image" alt="" id="start-1">
+					<img src="images/phone.png" class="start__screen__image" alt="" id="start-2">	
+				</div>
+				<div class="start__screen__scroll--icons" scroll-start>
+					<div class="start__scroll--icon active" scroll-item="start-1" ></div>
+					<div class="start__scroll--icon" scroll-item="start-2"></div>
+				</div>
+			</div>
+			<div class="start__text">
+				<div class="title">
+					Watch any films from
+					<br>
+					your phone on TV
+				</div>
+				<div class="additional__text">
+					Watch all your films on TV <br>
+					on Mobile
+				</div>
+			</div>
+			<div class="start__buttons">
+				<button class="btn success__btn" id='start'>
+					Let`s Start
+				</button>
+				<button class="btn additional__btn" id="login" btn>
+					Login
+				</button>
+			</div>
+			
+		</div>
+		
+	</div>
+	<header class="header" id="header" style="opacity: 0;
+	display: none;">
+		<div class="header__menu__icon left" id="back" style="display: none;">
+			<span class="material-icons-outlined">
+				arrow_back
+			</span>
+		</div>
+		
+		<img src="images/header.png" class="header__logo" alt="">			
+		<div class="header__menu__icon right"   style="display: none;">
+			<span class="material-icons-outlined" id="save--header" style="display: none;">
+				save
+			</span>
+			<div class="notifications" id="notifications" >
+				<div class="notific">
+					2
+				</div>
+				<span class="material-icons-outlined">
+					notifications
+				</span>
+			</div>
+			
+		</div>
+		
+	</header>
+	<div class="screen" id="screen--login" style="display: none; opacity: 0;">
+		<div class="content login--reg__content">
+			<div class="title">Login</div>
+			<form action="POST" class="form login--form">
+				<div class="form__controll">
+					<input type="text" class="input form__input" id="email--login">
+					<label class="input__label" for="email--login">Email</label>
+				</div>
+				<div class="form__controll">
+					<input type="password" class="input form__input" id="password--login">
+					<label class="input__label" for="password--login">Password</label>
+				</div>
+				<div class="login--buttons">
+					<button type="button" class="btn success__btn login" id="login--login">
+						Login
+					</button>
+					<button type="button" class="btn additional__btn register" id="register--login">
+						Register
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="screen" id="screen--register" style="display: none; opacity: 0;">
+		<div class="content login--reg__content">
+			<div class="title">Register</div>
+			<form action="POST" class="form login--form">
+				<div class="form__controll">
+					<input type="text" class="input form__input" id="email--register">
+					<label class="input__label" for="email--register">Email</label>
+				</div>
+				<div class="form__controll">
+					<input type="text" class="input form__input" id="login--register">
+					<label class="input__label" for="login--register">Login</label>
+				</div>
+				<div class="form__controll">
+					<input type="password" class="input form__input" id="password--register">
+					<label class="input__label" for="password--register">Password</label>
+				</div>
+				<div class="form__controll">
+					<input type="password" class="input form__input" id="password--again--register">
+					<label class="input__label" for="password--again--register">Password Again</label>
+				</div>
+				<div class="reg--buttons">
+					<button type="button" class="btn success__btn register" id="register">
+						Register
+					</button>
+					<button type="button" class="btn additional__btn login" id="loginReg">
+						Login
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="screen" id="screen--profile" style="opacity: 0;display: none;">
+		<div class="content login--reg__content">
+			<div class="title">Profile</div>
+			<form action="POST" class="form login--form">
+				<div class="form__controll">
+					<img src="images/ava.png" class="profile__avatar" alt="">
+					<input type="file" id="load--avatar" style="display: none;">
+					<label for="load--avatar" class="load"><span class="material-icons-sharp">photo_camera</span></label>
+
+				</div>
+				<div class="form__controll">
+					<input type="text" class="input form__input" id="email--profile">
+					<label class="input__label" for="email--profile">Email</label>
+				</div>
+				<div class="form__controll">
+					<input type="text" class="input form__input" id="login--profile">
+					<label class="input__label" for="login--profile">Login</label>
+				</div>
+				<div class="prof--buttons">
+					<button type="button" class="btn success__btn login" style="margin-top: -70px;">
+						Save
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="screen" id="screen--search" style="opacity: 0; display: none;">
+		<div class="content login--reg__content">
+			<div class="title">Search</div>
+			<form action="POST" class="form search--form">
+				<div class="form__controll">
+					<input type="search" class="input form__input" id="search">
+					<label class="input__label" for="search">Search</label>
+					<span class="material-icons-outlined search--icon" id="search-icon">search</span>
+				</div>
+				<div class="search__results" id="search-results">
+					<div class="search__result">
+						<div class="search__result">
+							Fast and Furiuos 9
+						</div>
+						<div class="search__result">
+							Luka
+						</div>
+						<div class="search__result">
+							Murder on the orient express
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="screen" id="screen--archive" style="opacity: 0; display: none;">
+		<div class="content archive__content">
+			<div class="title">Archive</div>
+			<div class="archive">
+				<div class="archive__item">
+					<img src="./images/archive/fast&fur.png" class="archive__image" alt="">
+					<div class="archive__hover" movie movie-content='{"id":1, 
+					"name":"Fast & Furious 9", "poster":"fastfur_png",
+						"ganre":"action","language":"English","published":2021,"rating":"5/10",
+						"duration":"02:23:20","actors":"./images/actors/fast/",
+						"overview":"After the events of the first part begin,Fate of the Furious, he decides to take help from Jacob, Doms brother, to implement a plan to implement a plan of revenge.After the events of the first part begin,Fate of the Furious, he decides to take help from Jacob, Doms brother, to implement a plan to implement a plan of revenge.After the events of the first part begin,Fate of the Furious, he decides to take help from Jacob, Doms brother, to implement a plan to implement a plan of revenge.After the events of the first part begin,Fate of the Furious, he decides to take help from Jacob, Doms brother, to implement a plan to implement a plan of revenge.After the events of the first part begin,Fate of the Furious, he decides to take help from Jacob, Doms brother, to implement a plan to implement a plan of revenge."
+						,"trailor":"https://www.youtube.com/embed/_Di_PJyDGIg"}'>
+						Have a Nice Watching
+					</div>
+				</div>
+				<div class="archive__item">
+					<img src="./images/archive/dethOnNile.png" class="archive__image" alt="">
+					<div class="archive__hover" movie movie-content='{"id":2, 
+					"name":"Deth On The Nile", "poster":"deth_png",
+						"ganre":"detective/crime","language":"English","published":2022,"rating":"8/10",
+						"duration":"02:00:00","actors":"./images/actors/deth/",
+						"overview":"Death on the Nile is a 2022 mystery film directed by Kenneth Branagh from a screenplay by Michael Green, based on the 1937 novel of the same name by Agatha Christie. It was produced by Branagh, Ridley Scott, Judy Hofflund, and Kevin J. Walsh. The film is a sequel to Murder on the Orient Express (2017), and stars Tom Bateman, Annette Bening, Branagh, Russell Brand, Ali Fazal, Dawn French, Gal Gadot, Armie Hammer, Rose Leslie, Emma Mackey, Sophie Okonedo, Jennifer Saunders, and Letitia Wright. Branagh and Bateman return from the first film, reprising their roles as Hercule Poirot and Bouc, respectively. The film is the third screen adaptation of Christies novel, following the 1978 film and an episode of the television series Agatha Christies Poirot broadcast in 2004. Principal photography began in September 2019, with filming taking place at Longcross Studios in England, completing that December.",
+						"trailor":"https://www.youtube.com/embed/dZRqB0JLizw"}'>
+						Have a Nice Watching
+					</div>
+				</div>
+				<div class="archive__item">
+					<img src="./images/archive/murder.jpg" class="archive__image" alt="">
+					<div class="archive__hover"  movie movie-content='{"id":3, 
+					"name":"Murder On The Orient Express", "poster":"murder_png",
+						"ganre":"detective/crime","language":"English","published":2017,"rating":"8/10",
+						"duration":"01:54:00","actors":"./images/actors/murder/",
+						"overview":"Murder on the Orient Express is a 2017 mystery film directed by Kenneth Branagh with a screenplay by Michael Green, based on the 1934 novel of the same name by Agatha Christie. The film stars Tom Bateman, Branagh, Penélope Cruz, Willem Dafoe, Judi Dench, Johnny Depp, Josh Gad, Derek Jacobi, Leslie Odom Jr., Michelle Pfeiffer, and Daisy Ridley, with Branagh portraying Hercule Poirot. The film is the fourth screen adaptation of Christies novel, following the 1974 film, a 2001 TV film version, and a 2010 episode of the television series Agatha Christies Poirot. The plot follows Poirot, a world-renowned detective, as he investigates a murder on the luxury Orient Express train service in the 1930s."
+						,"trailor":"https://www.youtube.com/embed/z68frP9Q7XA"}'>
+						Have a Nice Watching
+					</div>
+				</div>
+				<div class="archive__item">
+					<img src="./images/archive/honestThief.jpg" class="archive__image" alt="">
+					<div class="archive__hover" movie movie-content='{"id":4, 
+						"name":"Honest Thief", "poster":"honest_png",
+						"ganre":"action/thriller","language":"English","published":2020,"rating":"7/10",
+						"duration":"01:39:00","actors":"./images/actors/thief/",
+						"overview":"Honest Thief is a 2020 American action thriller film directed by Mark Williams, from a screenplay by Williams and Steve Allrich. The film stars Liam Neeson, Kate Walsh, Jai Courtney, Jeffrey Donovan, Anthony Ramos and Robert Patrick, and follows a former bank robber who decides to turn himself in to the FBI, only to be set up by corrupt agents."
+						,"trailor":"https://www.youtube.com/embed/ZUIEOMOxIDo"}'>
+						Have a Nice Watching
+					</div>
+				</div>
+				<div class="archive__item">
+					<img src="./images/archive/theVault.jpg" class="archive__image" alt="">
+					<div class="archive__hover" movie movie-content='{"id":5, 
+					"name":"The Vault", "poster":"thevault_png",
+					"ganre":"action/thriller","language":"English","published":2021,"rating":"7.5/10",
+					"duration":"01:58:00","actors":"./images/actors/vault/",
+					"overview":"The Vault, titled Way Down in various regions, is a 2021 Spanish action thriller film directed by Jaume Balagueró. The film stars Freddie Highmore, Àstrid Bergès-Frisbey, Sam Riley, Liam Cunningham, Luis Tosar, Axel Stein, José Coronado and Famke Janssen. The story bears a passing resemblance to that of the Black Swan Project, recovered in 2007 by Odyssey Marine Exploration, a private marine salvage firm, but later turned over to Spain after 5 years of legal wrangling."
+					,"trailor":"https://www.youtube.com/embed/L41IJiageyg"}'>
+						Have a Nice Watching
+					</div>
+				</div>
+				<div class="archive__item">
+					<img src="./images/archive/iceRoad.jpeg" class="archive__image" alt="">
+					<div class="archive__hover"  movie movie-content='{"id":6, 
+					"name":"The Ice Road", "poster":"iceroad_png",
+					"ganre":"action/thriller","language":"English","published":2021,"rating":"8.5/10",
+					"duration":"01:43:00","actors":"./images/actors/iceroad/",
+					"overview":"The Ice Road is a 2021 American action thriller film written and directed by Jonathan Hensleigh. The film stars Liam Neeson and Laurence Fishburne, with Benjamin Walker, Amber Midthunder, Marcus Thomas, Holt McCallany, Martin Sensmeier, Matt McCoy, and Matt Salinger in supporting roles. It marks Hensleighs first film since 2011s Kill the Irishman. It follows a team of truck drivers on a dangerous mission over frozen lakes and winter roads to deliver a crucial component to save workers trapped in a collapsed diamond mine. The film was digitally released by Netflix in the United States and Canada, and by Amazon Prime Video in the United Kingdom on June 25, 2021. The film received mixed reviews from critics."
+					,"trailor":"https://www.youtube.com/embed/SHEPdMqrWjE"}' >
+						Have a Nice Watching
+					</div>
+				</div>	
+			</div>
+		</div>
+	</div>
+
+	<div class="screen" id="screen--home"  style="opacity: 0;display: none;"> 
+		<div class="content main__content">
+			<div class="title main">
+				Top Views
+			</div>
+			<div class="top--views">
+				<div class="top--views scroll">
+					<img src="./images/movies/luka.png"  class="views__image" id="main-1" alt="" style="transform: translateX(88%);">
+					<img src="./images/movies/fast.png"  id="main-2" style="transform: translateX(150%);"  class="views__image" alt="">
+					<img src="./images/movies/avatar.png" class="views__image" id="main-3"alt="" style="transform: translateX(300%);">
+				</div>
+				<div class="top--views buttons" scroll-main>
+					<div class="switcher active" scroll-item="main-1"></div>
+					<div class="switcher"  scroll-item="main-2"></div>
+					<div class="switcher" scroll-item="main-3"></div>
+				</div>
+				
+			</div>
+			<div class="title main">
+				Top Categories
+			</div>
+			<div class="top--categories">
+				<div class="category__item">
+					<img src="./images/icons/action.png" class="category__image" alt="">
+					<p class="category__text">
+						Action
+					</p>
+				</div>
+				<div class="category__item">
+					<img src="./images/icons/comedy.png" class="category__image" alt="">
+					<p class="category__text">
+						Comedy
+					</p>
+				</div>
+				<div class="category__item">
+					<img src="./images/icons/romance.png" class="category__image" alt="">
+					<p class="category__text">
+						Romance
+					</p>
+				</div>
+				<div class="category__item">
+					<img src="./images/icons/sad.png" class="category__image" alt="">
+					<p class="category__text">
+						Sad
+					</p>
+				</div>
+				<div class="category__item">
+					<img src="./images/icons/horror.png" class="category__image" alt="">
+					<p class="category__text">
+						Horror
+					</p>
+				</div>
+				<div class="category__item">
+					<img src="./images/icons/sports.png" class="category__image" alt="">
+					<p class="category__text">
+						Sports
+					</p>
+				</div>
+			</div>
+			<div class="title main">
+				New Movies
+			</div>
+			<div class="top--movies">
+				<div class="movie">
+					<img src="./images/movies/fast.png" class="movie__poster" alt="">
+					<div class="movie__info">
+						<div class="movie__title">
+							Fast & Furious 9
+						</div>
+						<div class="movie__detail">
+							<div class="movie__detail__item">
+								Action
+							</div>
+							<div class="movie__detail__item">
+								5/10
+							</div>
+						</div>
+						<button class="btn movie__btn">Watch later</button>
+					</div>
+				</div>
+				<div class="movie">
+					<img src="./images/movies/resort.png" class="movie__poster" alt="">
+					<div class="movie__info">
+						<div class="movie__title">
+							Resort to Love
+						</div>
+						<div class="movie__detail">
+							<div class="movie__detail__item">
+								Romance
+							</div>
+							<div class="movie__detail__item">
+								7/10
+							</div>
+						</div>
+						<button class="btn movie__btn">Watch later</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="screen" id="screen--simple_one" style="opacity: 0;display: none;">
+		<div class="content film__content">
+			<div class="film__info">
+				<div class="film__poster__card">
+					<img src="./images/archive/fast&fur.png" class="film__poster" data-poster="fastfur_png" style="display: none;" alt="">
+					<img src="./images/archive/dethOnNile.png" class="film__poster" data-poster="deth_png" style="display: none;" alt="">
+					<img src="./images/archive/honestThief.jpg" class="film__poster" data-poster="honest_png" style="display: none;" alt="">
+					<img src="./images/archive/iceRoad.jpeg" class="film__poster" data-poster="iceroad_png" style="display: none;" alt="">
+					<img src="./images/archive/murder.jpg" class="film__poster" data-poster="murder_png" style="display: none;" alt="">
+					<img src="./images/archive/theVault.jpg" class="film__poster" data-poster="thevault_png" style="display: none;" alt="">
+
+				</div>
+				<div class="film__poster__card">
+					<h2 class="film__name" id="name">
+						Fast & Furious 9
+					</h2>
+					<div class="film__info__category">
+						<div class="film__category__name">Ganre</div>
+						<div class="film__category__value" id="ganre">Action</div>
+					</div>
+					<div class="film__info__category">
+						<div class="film__category__name">Language</div>
+						<div class="film__category__value" id="language">English</div>
+					</div>
+					<div class="film__info__category">
+						<div class="film__category__name">Published</div>
+						<div class="film__category__value" id="published">2021</div>
+					</div>
+					<div class="film__info__category">
+						<div class="film__category__name">Rationg</div>
+						<div class="film__category__value" id="rating">5/10</div>
+					</div>
+					<div class="film__info__category">
+						<div class="film__category__name">Duration</div>
+						<div class="film__category__value" id="duration">02:23:20</div>
+					</div>
+					<div class="film__info__category liked">
+						<img src="./images/likes/like-1.png" class="film__liked__ava" alt="" style="left: 0;">
+						<img src="./images/likes/like-2.png" class="film__liked__ava" alt="" style="left: 9px;">
+						<img src="./images/likes/like-3.png" class="film__liked__ava" alt="" style="left: 18px;">
+						<img src="./images/likes/like-4.png" class="film__liked__ava" alt="" style="left: 27px;">
+						<img src="./images/likes/like-5.png" class="film__liked__ava" alt="" style="left: 36px;">
+						<div class="film__liked" id="liked">Mike,123K Liked</div>
+					</div>
+					<div class="film__info__category">
+							<div class="film__likedis">
+								<span class="material-icons-outlined">thumb_up</span> LIKE
+							</div>
+							<div class="film__likedis">
+								<span class="material-icons-outlined">thumb_down</span> DISLIKE
+							</div>
+					</div>
+				</div>
+			</div>
+			<div class="title main">
+				Overview
+			</div>
+			<div class="overview">
+				<div class="overview__content" id="overview-content">
+					<div class="overview__text" id="more-info">
+						After the events of the first part begin,
+						Fate of the Furious, he decides to take 
+						help from Jacob, Dom's brother, to 
+						implement a plan to implement a 
+						plan of revenge.
+						After the events of the first part begin,
+						Fate of the Furious, he decides to take 
+						help from Jacob, Dom's brother, to 
+						implement a plan to implement a 
+						plan of revenge.
+						After the events of the first part begin,
+						Fate of the Furious, he decides to take 
+						help from Jacob, Dom's brother, to 
+						implement a plan to implement a 
+						plan of revenge.
+						After the events of the first part begin,
+						Fate of the Furious, he decides to take 
+						help from Jacob, Dom's brother, to 
+						implement a plan to implement a 
+						plan of revenge.
+						After the events of the first part begin,
+						Fate of the Furious, he decides to take 
+						help from Jacob, Dom's brother, to 
+						implement a plan to implement a 
+						plan of revenge.
+						
+					</div>
+					<iframe width="100%" height="200" id="trailor" src="https://www.youtube.com/embed/_Di_PJyDGIg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+				<div class="overview__nenu__btn" id="more-info-btn">
+					<span class="overview__line"></span>
+				</div>
+			</div>
+			<div class="title main">
+				Actors
+			</div>
+			<div class="actors">
+				<div class="actor">
+					<img src="./images/ava.png" actor id="actor-1" alt="">
+				</div>
+				<div class="actor">
+					<img src="./images/ava.png" id="actor-2" alt="">
+				</div>
+				<div class="actor">
+					<img src="./images/ava.png" id="actor-3" alt="">
+				</div>
+				<div class="actor">
+					<img src="./images/ava.png" id="actor-4" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<menu class="menu" id="menu" style="opacity: 0; display: none;" > 
+		<span class="material-icons-outlined menu__link active" screen-id="screen--home" >home</span>
+		<span class="material-icons-outlined menu__link" screen-id="screen--search">search</span>
+		<span class="material-icons-outlined menu__link" screen-id="screen--archive">folder</span>
+		<span class="material-icons-outlined menu__link " screen-id="screen--profile">person</span>
+	</menu>
+	<script src="js/js.js"></script>
+	<script src="js/inputs.js"></script>
+	<script src="js/menu.js"></script>
+	<script src="js/simplePage.js"></script>
+	<script src="js/scroll.js"></script>
+</body>
+</html>
